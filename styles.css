@@ -183,7 +183,7 @@ ul, li {
   max-width: 800px;
   max-height: 400px;
   display: flex;
-  filter: blur(5px);
+
 }
 
 
