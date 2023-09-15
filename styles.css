@@ -180,10 +180,12 @@ ul, li {
 }
 
 .WorkImg {
-  max-width: 800px; 
+  max-width: 800px;
   max-height: 400px;
   display: flex;
+  filter: blur(5px);
 }
+
 
 .InterestImg{
   width: 100%;
@@ -262,6 +264,11 @@ ul, li {
   width: 100%;
   height: 100%;
 }
+.image-container2 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
 
 .image-container img {
   transition: filter 0.3s ease; /* Add a smooth transition for the blur effect */
@@ -276,6 +283,20 @@ ul, li {
   transition: opacity 0.3s ease; /* Add a smooth transition for the text opacity */
 }
 
+.image-container2 img {
+  transition: filter 0.3s ease; /* Add a smooth transition for the blur effect */
+}
+
+.image-container2:hover img {
+  filter: blur(0px); /* Adjust the blur amount as needed */
+}
+
+.image-container2:hover .overlay-text {
+  opacity: 1;
+  transition: opacity 0.3s ease; /* Add a smooth transition for the text opacity */
+}
+
+
 .overlay-text {
   position: absolute;
   top: 50%;
@@ -289,3 +310,24 @@ ul, li {
   font-size: 20px;
   transition: opacity 0.3s ease; /* Add a smooth transition for the text opacity */
 }
+
+/* Define the arrow animation */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+/* Apply the animation to the arrow */
+.arrow {
+  /* display: inline-block; */
+
+  animation: bounce 1s infinite;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0.5s; /* Optional delay for timing */
+
+}
+
