@@ -339,9 +339,10 @@ body,
 }
 
 .skills span {
-  border: 1px solid black;
+  border: 1px solid white;
   margin-right: 5px;
   margin-bottom: 10px;
+  padding: 2px;
 }
 
 .secthree{
