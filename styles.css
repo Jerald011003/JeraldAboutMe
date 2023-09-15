@@ -251,23 +251,59 @@ body,
     overflow-x: auto;
   }
   .secone {
-    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
       padding: 0px;
       font-size: 24px;
       
   }
   .sectwo {
-    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     padding: 0px;
     font-size: 24px;
 }
 .secthree {
-    
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   padding: 0px;
   font-size: 24px;
 }
 .secfour {
-    
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0px;
+  font-size: 24px;
+}
+
+.secfive {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0px;
+  font-size: 24px;
+}
+
+.secsix {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   padding: 0px;
   font-size: 24px;
 }
@@ -312,7 +348,19 @@ body,
   }
 }
 
+@media (max-width: 200px) {
+  .right-content{
+    font-size: 10px;
+  }
+  .logo{
+    display: none;
+  }
+}
+
 @media (max-width: 768px) {
+  .logo{
+    display: none;
+  }
   .content2{
     display: flex;
     flex-direction: column;
@@ -504,8 +552,10 @@ body,
     border-radius: 20px;
   }
 
- .right-contentitem{
+ .right-contentitem p{
   font-size: 10px;
+  text-align: center;
+  margin-left: 10px;
  }
 }
 
@@ -557,16 +607,19 @@ body,
   .interest-container {
     flex-direction: column;
     align-items: center;
+    
   }
 
   .interest-item {
     width: 90%;
     max-width: 90%;
     margin-bottom: 20px;
+    
   }
 
   .InterestImg{
     width: 1000vh;
+    
   }
 }
 
