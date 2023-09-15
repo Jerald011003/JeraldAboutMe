@@ -46,7 +46,7 @@
                 <div class="content">
                     <div class="text">
                       <div class="arrow">
-                        Hi, I am <span onclick="goToSection(2)">Jerald</span>
+                        Hi, I am <span><a href="#background" style="text-decoration: none; color: white;">Jerald</a></span>
                       </div>
                       
                     </div>
@@ -55,41 +55,41 @@
             </div>
         </section>
     
-   <!-- Section 2 -->
-<section class="sectwo" id="background">
-    <div class="content2">
-        <div class="left-content">
-            <picture>
-                <source srcset="Me.jpg" media="(min-width: 768px)">
-                <img src="Me.jpg" alt="Jerald Francis" class="img" width="70%">
-            </picture>
-        </div>
-        <div class="right-content">
-            <div class="fade-in">
-                <h1>My Background</h1>
-                <p>
-                    In my career, I've gone through several phases, each of which has influenced my current work attitude and philosophy.
-                </p>
-                <br>
-                <p>
-                    I've thrived in a number of technical roles in a variety of fields, and I believe my most valuable asset is my ability to adapt to any particular circumstance.
-                </p>
-            </div>
-            <div class="fade-in">
-                <br>
-                <h1>My Skills</h1>
-                <p class="skills">
-                    <span>Leadership</span>
-                    <span>Communication</span>
-                    <span>Critical thinking</span>
-                    <span>Risk management</span>
-                    <span>Cost management</span>
-                    <span>Explorative</span>
-                </p>
-            </div>
-        </div>
-    </div>
-</section>
+            <!-- Section 2 -->
+          <section class="sectwo" id="background">
+              <div class="content2">
+                  <div class="left-content">
+                      <picture>
+                          <source srcset="Me.jpg" media="(min-width: 768px)">
+                          <img src="Me.jpg" alt="Jerald Francis" class="img" width="70%">
+                      </picture>
+                  </div>
+                  <div class="right-content">
+                      <div class="fade-in">
+                          <h1>My Background</h1>
+                          <p>
+                              In my career, I've gone through several phases, each of which has influenced my current work attitude and philosophy.
+                          </p>
+                          <br>
+                          <p>
+                              I've thrived in a number of technical roles in a variety of fields, and I believe my most valuable asset is my ability to adapt to any particular circumstance.
+                          </p>
+                      </div>
+                      <div class="fade-in">
+                          <br>
+                          <h1>My Skills</h1>
+                          <p class="skills">
+                              <span>Leadership</span>
+                              <span>Communication</span>
+                              <span>Critical thinking</span>
+                              <span>Risk management</span>
+                              <span>Cost management</span>
+                              <span>Explorative</span>
+                          </p>
+                      </div>
+                  </div>
+              </div>
+          </section>
 
 
       <!-- Section 3 -->
@@ -311,36 +311,30 @@
     </div>
 </section>
 
-
         </main>
+
+        <!-- Footer -->
 
         <footer style="background-color: #2A292B; color: white; text-align: center; padding: 10px;">
             &copy; 2023 Jerald. All Rights Reserved.
         </footer>
         
+
         <script>
-            function goToSection(sectionNumber) {
-                document.querySelectorAll("section").forEach((section, index) => {
-                section.style.display =
-                    index + 1 === sectionNumber ? "block" : "none";
-                });
-            }
-
-            document.getElementById('logo-link').addEventListener('click', function() {
-                window.location.href = 'Minalin.html'; 
-            });
-
-            function redirectToGmail() {
-                    window.location.href = 'https://mail.google.com/mail/u/0/#inbox';
-                }
+              
+                // Redirecting
+                function redirectToGmail() {
+                        window.location.href = 'https://mail.google.com/mail/u/0/#inbox';
+                    }
+                // Navbar Hamburger
                 function toggleNav() {
-        var navLinks = document.getElementById("navLinks");
-        if (navLinks.style.display === "block") {
-            navLinks.style.display = "none";
-        } else {
-            navLinks.style.display = "block";
-        }
-    }
+                var navLinks = document.getElementById("navLinks");
+                if (navLinks.style.display === "block") {
+                    navLinks.style.display = "none";
+                } else {
+                    navLinks.style.display = "block";
+                }
+            }
         </script>
         
   </body>

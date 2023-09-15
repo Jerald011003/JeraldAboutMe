@@ -7,18 +7,18 @@ body,
   font-family: 'Roboto', sans-serif;
  }
  
-/* CSS Reset */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* CSS for the container */
+
 .container {
-  max-width: 1900px; /* Adjust this width as needed */
-  margin: 0 auto; /* Center the container */
-  padding: 0px; /* Add some padding for spacing */
+  max-width: 1900px;
+  margin: 0 auto; 
+  padding: 0px; 
   background-image: url('Photo\ 4.4.jpg'); 
   background-size: cover; 
   background-repeat: no-repeat; 
@@ -28,8 +28,8 @@ body,
 /* CSS for the navbar */
 .navbar {
   display: flex;
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
+  justify-content: center; 
+  align-items: center;
   position: fixed;
   top: 0;
   left: 0;
@@ -37,14 +37,14 @@ body,
   background-color: rgba(0, 0, 0, 0.3);
   z-index: 100;
   transition: background-color 0.3s;
-  padding: 10px 20px; /* Add padding for spacing */
+  padding: 10px 20px; 
 }
 
 
 /* CSS for the logo */
 .logo {
-  display: flex; /* Enable flex layout for logo */
-  align-items: center; /* Vertically center content within logo */
+  display: flex; 
+  align-items: center;
   color: white;
 }
 
@@ -55,9 +55,6 @@ body,
   font-size: 20px;
   font-family: 'Lobster', cursive;
 }
-
-/* Rest of your existing CSS for the navbar */
-
 
 .nav-links {
   list-style: none;
@@ -87,7 +84,7 @@ body,
 
 /* CSS for the hamburger menu */
 .hamburger-menu {
-  display: none; /* Initially hide the hamburger menu */
+  display: none; 
   flex-direction: column;
   cursor: pointer;
   padding: 10px;
@@ -105,18 +102,18 @@ body,
 
 
   .nav-links {
-      display: none; /* Hide the regular navigation links */
+      display: none;
   }
 
   .hamburger-menu {
-      display: flex; /* Show the hamburger menu */
+      display: flex;
   }
 
-  /* Add styles to the navigation links when the hamburger menu is displayed */
+
   .nav-links.active {
       display: block;
       position: absolute;
-      top: 60px; /* Adjust as needed to position the dropdown menu */
+      top: 60px;
       left: 0;
       background-color: #333;
       width: 100%;
@@ -131,7 +128,7 @@ body,
 
   .nav-links a{
     display: flex;
-    flex-direction: column; /* Set flex direction to horizontal (left to right) */
+    flex-direction: column;
 
   }
 
@@ -146,14 +143,14 @@ body,
 /* CSS for the section */
 .secone {
   position: relative;
-  height: 100vh; /* 100% of the viewport height */
+  height: 100vh; 
   background-color: rgba(255,255,255,0);
   color: white;
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden; /* Hide overflowing content */
+  overflow: hidden; 
   
 }
 
@@ -165,7 +162,7 @@ body,
   width: 100%;
   height: 100%;
   background-color: rgba(255,255,255,0);
-  display: flex; /* Use flex to center the content */
+  display: flex; 
   justify-content: center;
   align-items: center;
 }
@@ -181,7 +178,7 @@ body,
 
 .content2{
   display: flex;
-  flex-direction: row; /* Set flex direction to horizontal (left to right) */
+  flex-direction: row; 
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -190,20 +187,12 @@ body,
 
 .content3{
   display: flex;
-  flex-direction: column; /* Set flex direction to horizontal (left to right) */
+  flex-direction: column; 
   justify-content: center;
   align-items: center;
   text-align: center;
  
 }
-
-/* .content4{
-  display: flex;
-  flex-direction: row; 
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-} */
 
 /* CSS for text in Section 2 */
 .text {
@@ -222,9 +211,10 @@ body,
   font-size: 50px;
   font-weight: lighter;
   font-family: 'Lobster', cursive;
+  
 }
 
-/* CSS for the button */
+/* CSS for the email-button */
 .email-button {
   display: inline-block;
   padding: 10px 20px;
@@ -237,6 +227,7 @@ body,
   font-family: 'Roboto', sans-serif;
   font-weight: lighter;
   margin-top: 20px;
+  cursor: grab;
 }
 
 .email-button:hover {
@@ -309,7 +300,6 @@ body,
 }
 }
 
-/* CSS for Section 2 */
 .sectwo {
   padding: 50px;
   height: 100%;
@@ -459,7 +449,7 @@ body,
   text-align: center;
 }
 
-/* Add this CSS to your stylesheet */
+/* css for 4th screen */
 .secfour {
   padding: 50px;
   height: 100%;
@@ -491,7 +481,6 @@ body,
   max-width: 45%;
   padding: 5px;
   text-align: center;
-  /* margin-right: 100px; */
  
 }
 
@@ -524,21 +513,14 @@ body,
   
   .row,
   .content4 {
-    /* display: flex; */
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
   }
 
-  /* .item {
-    flex: 10;
-    margin: 10px;
-  } */
-
   .item{
     font-size: 15px;
-    /* margin-left: 100px; */
   }
 
   .row{
@@ -591,16 +573,15 @@ body,
   height: 50vh;
 }
 
-/* Container styles */
 .content5 {
   padding: 20px;
 }
 
 .interest-container {
   display: flex;
-  flex-wrap: nowrap; /* Keep all items in a single row */
+  flex-wrap: nowrap; 
   justify-content: space-around;
-  overflow-x: auto; /* Enable horizontal scrolling for small screens */
+  overflow-x: auto; 
 }
 /* Media queries for responsiveness */
 @media (max-width: 768px) {
@@ -631,7 +612,8 @@ body,
   text-align: center;
   justify-content: center;
   align-items: center;
-}/* Updated CSS for Section 6 responsiveness */
+}
+
 .content6 {
   display: flex;
   justify-content: center;
@@ -660,7 +642,6 @@ body,
 
 .form-group {
   margin-bottom: 5px;
-  /* padding-right: 25px; */
   width: 100%;
 }
 
@@ -689,7 +670,6 @@ body,
 .social-icons a {
   text-decoration: none;
   color: white;
-  /* margin-bottom: 10px; */
   margin-right:  20px;
 
 }
@@ -710,7 +690,7 @@ body,
   }
 }
 
-/* Define the animation */
+/* text animation */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -722,14 +702,13 @@ body,
   }
 }
 
-/* Apply the animation to your content */
 .secone .content {
   animation: fadeInUp 1s ease forwards;
-  opacity: 0; /* Start with opacity set to 0 */
-  transform: translateY(20px); /* Start slightly below its final position */
+  opacity: 0;
+  transform: translateY(20px); 
 }
 
-/* Define the animation for the navbar */
+/* navbar animation */
 @keyframes slideInDown {
   from {
     transform: translateY(-100%);
@@ -739,78 +718,73 @@ body,
   }
 }
 
-/* Apply the animation to the navbar */
 .navbar {
   animation: slideInDown 1s ease forwards;
   transform: translateY(-100%);
 }
 
-/* Add a class to the container for ease of styling */
+
 .work-item-container {
-  /* position: relative; */
   display: flex;
   flex-wrap: wrap;
   overflow: hidden;
-  transition: transform 0.3s ease; /* Add smooth transition for movement */
+  transition: transform 0.3s ease; 
 }
 
-/* Define the overlay text styles */
 .overlay-text {
   position: absolute;
-  top: 50%; /* Vertically center the text */
-  left: 50%; /* Horizontally center the text */
-  transform: translate(-50%, -50%); /* Center the text precisely */
-  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+  top: 50%; 
+  left: 50%;
+  transform: translate(-50%, -50%); 
+  background-color: rgba(0, 0, 0, 0.8);
   color: white;
   text-align: center;
-  line-height: 1.5; /* Adjust as needed for vertical centering */
-  opacity: 0; /* Initially hidden */
-  transition: opacity 0.3s ease; /* Add smooth transition for opacity */
+  line-height: 1.5; 
+  opacity: 0; 
+  transition: opacity 0.3s ease; 
 }
 
-/* When hovering the container, show the overlay text and move the container */
+
 .work-item-container:hover .overlay-text {
-  opacity: 1; /* Show the overlay text */
+  opacity: 1;
 }
 
 .work-item-container:hover {
-  transform: scale(1.1); /* Scale up the container on hover */
+  transform: scale(1.1);
 }
 
-/* Add a class to the container for ease of styling */
+
 .work-item-container2 {
-  /* position: relative; */
   display: flex;
   flex-wrap: wrap;
   overflow: hidden;
-  transition: transform 0.3s ease; /* Add smooth transition for movement */
+  transition: transform 0.3s ease;
 }
 
-/* Define the overlay text styles */
+
 .overlay-text2 {
   position: absolute;
-  top: 50%; /* Vertically center the text */
-  left: 50%; /* Horizontally center the text */
-  transform: translate(-50%, -50%); /* Center the text precisely */
-  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.8);
   color: white;
   text-align: center;
-  line-height: 1.5; /* Adjust as needed for vertical centering */
-  opacity: 0; /* Initially hidden */
-  transition: opacity 0.3s ease; /* Add smooth transition for opacity */
+  line-height: 1.5;
+  opacity: 0;
+  transition: opacity 0.3s ease;
   padding: 15px;
 }
 
-/* When hovering the container, show the overlay text and move the container */
+
 .work-item-container2:hover .overlay-text2 {
-  opacity: 1; /* Show the overlay text */
+  opacity: 1; 
 }
 
 .work-item-container2:hover {
-  transform: scale(1.1); /* Scale up the container on hover */
+  transform: scale(1.1); 
 }
 
-/* CSS for the bouncing animation */
 @keyframes bounce {
   0%, 20%, 50%, 80%, 100% {
     transform: translateY(0);
@@ -823,7 +797,6 @@ body,
   }
 }
 
-/* CSS for the bouncing animation */
 .arrow span {
   display: inline-block;
   cursor: pointer;
