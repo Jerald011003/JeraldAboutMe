@@ -1,4 +1,3 @@
-
 body,
  h1,
  h2,
@@ -7,126 +6,63 @@ body,
   padding: 0;
   font-family: 'Roboto', sans-serif;
  }
+ 
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
- body {
+/* CSS for the container */
+.container {
+  max-width: 1900px; /* Adjust this width as needed */
+  margin: 0 auto; /* Center the container */
+  padding: 0px; /* Add some padding for spacing */
   background-image: url('Photo\ 4.4.jpg'); 
   background-size: cover; 
   background-repeat: no-repeat; 
   background-attachment: fixed; 
-  animation: stars 20s linear infinite;
-  font-family: 'Roboto', sans-serif;
 }
 
-.secone {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-
-  cursor: pointer;
-  height: 100vh;
-  background-position: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  
-}
-
-.sectwo {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 40px;
-  cursor: pointer;
-  height: 100vh;
-  background-position: 50%;
-  height: 100%;
-  justify-content: center;
-  align-items: center;
-  background-color: white;
-}
-
-.secthree {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color:  #C1AD8A;
-  cursor: pointer;
-  height: 100vh;
-  height: 100%;
-  justify-content: center;
-  align-items: center;
-}
-
-.secfour {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 100px;
-  background-color:  #D8D1CC;
-  cursor: pointer;
-  height: 150vh;
-  height: 100%;
-  justify-content: center;
-  align-items: center;
-}
-
-
-.secfive {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color:  #2A292B;
-  cursor: pointer;
-  height: 100vh;
-  height: 100%;
-  justify-content: center;
-  align-items: center;
-}
-
-.secsix {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 150px;
-  background-color:  #2A292B;
-  cursor: pointer;
-  height: 70vh;
-  /* height: 100%; */
-  justify-content: center;
-  align-items: center;
- 
-}
-
-ul, li {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
+/* CSS for the navbar */
 .navbar {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  background-color: rgba(0, 0, 0, 0.2);
-  background-position: 50%;
-  justify-content: center;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 100;
+  transition: background-color 0.3s;
+  padding: 10px 20px; /* Add padding for spacing */
 }
 
+
+/* CSS for the logo */
 .logo {
-  font-size: 18px;
-  font-weight: bold;
-  text-align: left;
+  display: flex; /* Enable flex layout for logo */
+  align-items: center; /* Vertically center content within logo */
   color: white;
-  margin-left: 50px;
 }
+
+/* CSS for the logo text */
+.logo h2 {
+  margin-right: 20px;
+  font-weight: lighter;
+  font-size: 20px;
+  font-family: 'Lobster', cursive;
+}
+
+/* Rest of your existing CSS for the navbar */
+
 
 .nav-links {
+  list-style: none;
   display: flex;
   gap: 20px;
-}
-
-.nav-links li {
-  font-size: 18px;
-  font-weight: bold;
 }
 
 .nav-links a {
@@ -138,6 +74,7 @@ ul, li {
   font-family: 'Roboto', sans-serif;
   margin: 0;
   font-weight: lighter;
+  
 }
 
 .nav-links a:hover {
@@ -147,14 +84,144 @@ ul, li {
   border-radius: 5px;
 }
 
-.nav-links li {
-  margin-right: 10px;
+
+/* CSS for the hamburger menu */
+.hamburger-menu {
+  display: none; /* Initially hide the hamburger menu */
+  flex-direction: column;
+  cursor: pointer;
+  padding: 10px;
 }
 
-.nav-links li:last-child {
-  margin-right: 80px; 
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 3px 0;
 }
 
+/* Media query for smaller screens (e.g., mobile) */
+@media (max-width: 768px) {
+  .nav-links {
+      display: none; /* Hide the regular navigation links */
+  }
+
+  .hamburger-menu {
+      display: flex; /* Show the hamburger menu */
+  }
+
+  /* Add styles to the navigation links when the hamburger menu is displayed */
+  .nav-links.active {
+      display: block;
+      position: absolute;
+      top: 60px; /* Adjust as needed to position the dropdown menu */
+      left: 0;
+      background-color: #333;
+      width: 100%;
+      text-align: center;
+  }
+
+  .nav-links.active li {
+      padding: 10px 0;
+
+      
+  }
+
+  .nav-links a{
+    display: flex;
+    flex-direction: column; /* Set flex direction to horizontal (left to right) */
+
+  }
+
+  .nav-links a:hover {
+
+    padding: 0px;
+    border-radius: 0px;
+  }
+}
+
+
+/* CSS for the section */
+.secone {
+  position: relative;
+  height: 100vh; /* 100% of the viewport height */
+  background-color: rgba(255,255,255,0);
+  color: white;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Hide overflowing content */
+}
+
+/* CSS for the overlay */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255,255,255,0);
+  display: flex; /* Use flex to center the content */
+  justify-content: center;
+  align-items: center;
+}
+
+/* CSS for the content in Section 2 */
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.content2{
+  display: flex;
+  flex-direction: row; /* Set flex direction to horizontal (left to right) */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+}
+
+.content3{
+  display: flex;
+  flex-direction: column; /* Set flex direction to horizontal (left to right) */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+ 
+}
+
+/* .content4{
+  display: flex;
+  flex-direction: row; 
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+} */
+
+/* CSS for text in Section 2 */
+.text {
+  font-size: 50px;
+  font-weight: lighter;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* CSS for images in Section 2 */
+.img {
+  max-width: 100%;
+  height: auto;
+}
+
+.arrow span {
+  font-size: 50px;
+  font-weight: lighter;
+  font-family: 'Lobster', cursive;
+}
+
+/* CSS for the button */
 .email-button {
   display: inline-block;
   padding: 10px 20px;
@@ -166,6 +233,7 @@ ul, li {
   transition: background-color 0.3s, color 0.3s;
   font-family: 'Roboto', sans-serif;
   font-weight: lighter;
+  margin-top: 20px;
 }
 
 .email-button:hover {
@@ -173,161 +241,508 @@ ul, li {
   color:  #333 ;
 }
 
-.Me img {
-  max-width: 650px; 
-  max-height: 500px;
-  border-radius: 25px;
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+
+  .secone {
+    
+      padding: 0px;
+      font-size: 24px;
+  }
+  .sectwo {
+    
+    padding: 0px;
+    font-size: 24px;
+}
+.secthree {
+    
+  padding: 0px;
+  font-size: 24px;
+}
+.secfour {
+    
+  padding: 0px;
+  font-size: 24px;
+}
 }
 
-.WorkImg {
-  max-width: 800px;
-  max-height: 400px;
-  display: flex;
-
+/* CSS for Section 2 */
+.sectwo {
+  padding: 50px;
+  height: 100%;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
 }
 
 
-.InterestImg{
-  width: 100%;
-  height: 90%;
-  object-fit: cover;
-  display: flex;
-  margin-top: 15px;
+.left-content{
+  padding: 25px;
+  text-align: left;
+  text-align: center;
+    
+}
+.right-content {
+    padding: 25px;
+    text-align: left;
+    margin-right: 50px;
+  
 }
 
-.FiverrImg {
-  max-width: 800px; 
-  max-height: 400px;
-  display: flex;
-  border-radius: 20px;
-  height: auto;
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
 }
 
-.ClientImg {
-  max-width: 250px; 
-  max-height: 250px;
-  display: flex;
-  border-radius: 250px;
-  height: auto;
-}
-
- /* Keyframes for the fade-in animation */
- @keyframes fadeIn {
-  0% {
+@keyframes fadeIn {
+  from {
       opacity: 0;
   }
-  100% {
+  to {
       opacity: 1;
   }
 }
 
-/* Apply the fade-in animation to the content */
-.fade-in {
-  animation: fadeIn 1s ease-in-out;
+@media (max-width: 768px) {
+  .content2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+  }
+
+  .content3{
+    height: 100%;
+  }
+  .right-content{
+    margin-right: 0px;
+  }
+  
+
 }
 
-  /* Keyframes for the slide-in animation */
-  @keyframes slideIn {
-    0% {
-        transform: translateY(-100%);
-    }
-    100% {
-        transform: translateY(0);
-    }
+.img {
+  max-width: 75%;
+  height: auto;
+  border-radius: 20px;
 }
 
-/* Apply the slide-in animation to the navbar */
-.navbar {
-    animation: slideIn 1s ease-in-out;
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
 }
 
-  /* Keyframes for the fade-in animation */
-  @keyframes fadeInSection2 {
-    0% {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.skills span {
+  border: 1px solid black;
+  margin-right: 5px;
+  margin-bottom: 10px;
 }
 
-/* Apply the fade-in animation to the content in Section 2 */
-.sectwo .fade-in {
-    animation: fadeInSection2 1s ease-in-out;
-}
-
- /* Style for the text overlay */
- .image-container {
-  position: relative;
-  width: 100%;
+.secthree{
+  padding: 50px;
   height: 100%;
+  
+  background-color: #C1AD8A;
+  color: white;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
 }
-.image-container2 {
+
+.categories {
+  margin-bottom: 20px;
+  line-height: 50px;
+}
+
+.categories a {
+  text-decoration: none;
+  color: white;
+  border: 1px solid white;
+  padding: 5px;
+  margin: 5px;
+  
+}
+
+.work-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.work-item {
   position: relative;
+  overflow: hidden;
+  
   width: 100%;
+  max-width: 400px;
+  background-color: #484547;
+  border: 1px solid white;
+}
+
+.WorkImg {
+  max-width: 100%;
   height: 100%;
+  
 }
-
-.image-container img {
-  transition: filter 0.3s ease; /* Add a smooth transition for the blur effect */
-}
-
-.image-container:hover img {
-  filter: blur(5px); /* Adjust the blur amount as needed */
-}
-
-.image-container:hover .overlay-text {
-  opacity: 1;
-  transition: opacity 0.3s ease; /* Add a smooth transition for the text opacity */
-}
-
-.image-container2 img {
-  transition: filter 0.3s ease; /* Add a smooth transition for the blur effect */
-}
-
-.image-container2:hover img {
-  filter: blur(0px); /* Adjust the blur amount as needed */
-}
-
-.image-container2:hover .overlay-text {
-  opacity: 1;
-  transition: opacity 0.3s ease; /* Add a smooth transition for the text opacity */
-}
-
 
 .overlay-text {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  opacity: 0;
-  background-color: rgba(0, 0, 0, 0.8);
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
   color: white;
-  padding: 10px;
-  text-align: center;
   font-size: 20px;
-  transition: opacity 0.3s ease; /* Add a smooth transition for the text opacity */
+  padding: 5px;
+  text-align: center;
 }
 
-/* Define the arrow animation */
-@keyframes bounce {
-  0%, 100% {
+/* Add this CSS to your stylesheet */
+.secfour {
+  padding: 50px;
+  height: 100%;
+  background-color: #D8D1CC;
+  color: black;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.content4 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 10px;
+  margin-right: 50px;
+}
+
+.item {
+  flex: 1;
+  max-width: 45%;
+  padding: 5px;
+  text-align: center;
+  /* margin-right: 100px; */
+ 
+}
+
+.FiverrImg,
+.ClientImg,
+.item img {
+  width: 65%;
+  height: auto;
+  border-radius: 20px;
+}
+
+
+
+.left-contentitem{
+  padding: 15px;
+  text-align: left;
+  text-align: center;
+    
+}
+.right-contentitem{
+    font-size: 20px;
+    padding: 15px;
+    text-align: justify;
+    margin-right: 20px;
+  
+}
+
+
+@media (max-width: 768px) {
+  .row,
+  .content4 {
+    /* display: flex; */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  /* .item {
+    flex: 10;
+    margin: 10px;
+  } */
+
+  .item{
+    font-size: 15px;
+    /* margin-left: 100px; */
+  }
+
+  .row{
+    margin-right: 0px;
+  }
+  .FiverrImg,
+  .ClientImg,
+  .item img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+  }
+
+ 
+}
+
+.secfive {
+  padding: 50px;
+  height: 100%;
+  background-color: #2A292B;
+  color: black;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.content5 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.interest-item {
+  text-align: center;
+  padding: 25px;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.InterestImg,
+.interest-item img {
+  max-width: 100%;
+  height: 50vh;
+}
+
+/* Container styles */
+.content5 {
+  padding: 20px;
+}
+
+.interest-container {
+  display: flex;
+  flex-wrap: nowrap; /* Keep all items in a single row */
+  justify-content: space-around;
+  overflow-x: auto; /* Enable horizontal scrolling for small screens */
+}
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .interest-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .interest-item {
+    width: 90%;
+    max-width: 90%;
+    margin-bottom: 20px;
+  }
+
+  .InterestImg{
+    width: 1000vh;
+  }
+}
+
+.secsix {
+  padding: 50px;
+  height: 100%;
+  background-color: #2A292B;
+  color: black;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}/* Updated CSS for Section 6 responsiveness */
+.content6 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+.left-content3,
+.right-content3 {
+  flex: 1;
+  max-width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.left-content3 form {
+  max-width: 400px;
+  margin: 0 auto;
+  width: 125%;
+}
+
+.form-group {
+  margin-bottom: 5px;
+  /* padding-right: 25px; */
+  width: 100%;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+}
+
+.form-group input[type="submit"] {
+  background-color: #007BFF;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.social-icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 40px;
+}
+
+.social-icons a {
+  text-decoration: none;
+  color: white;
+  /* margin-bottom: 10px; */
+  margin-right:  20px;
+
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .left-content3,
+  .right-content3 {
+      max-width: 100%;
+  }
+
+  .left-content3 form{
+    width: 100%;
+  }
+
+  .social-icons a{
+    margin-right: 0px;
+  }
+}
+
+/* Define the animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
     transform: translateY(0);
   }
-  50% {
-    transform: translateY(-8px);
+}
+
+/* Apply the animation to your content */
+.secone .content {
+  animation: fadeInUp 1s ease forwards;
+  opacity: 0; /* Start with opacity set to 0 */
+  transform: translateY(20px); /* Start slightly below its final position */
+}
+
+/* Define the animation for the navbar */
+@keyframes slideInDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
   }
 }
 
-/* Apply the animation to the arrow */
-.arrow {
-  /* display: inline-block; */
-
-  animation: bounce 1s infinite;
-  animation-timing-function: ease-in-out;
-  animation-delay: 0.5s; /* Optional delay for timing */
-
+/* Apply the animation to the navbar */
+.navbar {
+  animation: slideInDown 1s ease forwards;
+  transform: translateY(-100%);
 }
 
+/* Add a class to the container for ease of styling */
+.work-item-container {
+  /* position: relative; */
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  transition: transform 0.3s ease; /* Add smooth transition for movement */
+}
+
+/* Define the overlay text styles */
+.overlay-text {
+  position: absolute;
+  top: 50%; /* Vertically center the text */
+  left: 50%; /* Horizontally center the text */
+  transform: translate(-50%, -50%); /* Center the text precisely */
+  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+  color: white;
+  text-align: center;
+  line-height: 1.5; /* Adjust as needed for vertical centering */
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s ease; /* Add smooth transition for opacity */
+}
+
+/* When hovering the container, show the overlay text and move the container */
+.work-item-container:hover .overlay-text {
+  opacity: 1; /* Show the overlay text */
+}
+
+.work-item-container:hover {
+  transform: scale(1.1); /* Scale up the container on hover */
+}
+
+/* Add a class to the container for ease of styling */
+.work-item-container2 {
+  /* position: relative; */
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  transition: transform 0.3s ease; /* Add smooth transition for movement */
+}
+
+/* Define the overlay text styles */
+.overlay-text2 {
+  position: absolute;
+  top: 50%; /* Vertically center the text */
+  left: 50%; /* Horizontally center the text */
+  transform: translate(-50%, -50%); /* Center the text precisely */
+  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+  color: white;
+  text-align: center;
+  line-height: 1.5; /* Adjust as needed for vertical centering */
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s ease; /* Add smooth transition for opacity */
+  padding: 15px;
+}
+
+/* When hovering the container, show the overlay text and move the container */
+.work-item-container2:hover .overlay-text2 {
+  opacity: 1; /* Show the overlay text */
+}
+
+.work-item-container2:hover {
+  transform: scale(1.1); /* Scale up the container on hover */
+}
