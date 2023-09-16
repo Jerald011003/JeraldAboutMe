@@ -626,9 +626,10 @@ body,
 @media (max-width: 1500px) {
   .interest-item img,
   .InterestImg{
-    height: 35vh;
+    height: auto;
   }
 }
+
 /* Media queries for responsiveness */
 @media (max-width: 768px) {
   .interest-container {
