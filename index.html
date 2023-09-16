@@ -27,11 +27,11 @@
             </div>
             <ul class="nav-links" id="navLinks">
                 
-                <li><a href="#background" >Background</a></li>
-                <li><a href="#portfolio" >Portfolio</a></li>
-                <li><a href="#experience" >Experience</a></li>
-                <li><a href="#interest" >Interest</a></li>
-                <li><a href="#contact" >Contact</a></li>
+                <li><a href="#background" onclick="closeNav()">Background</a></li>
+                <li><a href="#portfolio" onclick="closeNav()">Portfolio</a></li>
+                <li><a href="#experience" onclick="closeNav()" >Experience</a></li>
+                <li><a href="#interest" onclick="closeNav()" >Interest</a></li>
+                <li><a href="#contact"  onclick="closeNav()">Contact</a></li>
             </ul>
             <div class="hamburger-menu" onclick="toggleNav()">
                 <div class="bar"></div>
@@ -96,9 +96,9 @@
 <section class="secthree"  id="portfolio">
     <div class="content3">
         <div class="categories">
-            <a href="#" style="text-decoration: none; color: white; border: 1px solid white; padding: 5px;">Web Design</a>
-            <a href="#" style="text-decoration: none; color: white; border: 1px solid white; padding: 5px;">Art Design</a>
-            <a href="#" style="text-decoration: none; color: white; border: 1px solid white; padding: 5px;">Music Produced</a>
+            <a href="#" style="text-decoration: none; color: white; border: 1px solid white; padding: 5px; font-family: 'Roboto', sans-serif; font-weight: lighter; ">Web Design</a>
+            <a href="#" style="text-decoration: none; color: white; border: 1px solid white; padding: 5px; font-family: 'Roboto', sans-serif; font-weight: lighter;">Art Design</a>
+            <a href="#" style="text-decoration: none; color: white; border: 1px solid white; padding: 5px; font-family: 'Roboto', sans-serif; font-weight: lighter;">Music Produced</a>
           
         </div>
         <br>
@@ -219,9 +219,10 @@
 <!-- Section 5 -->
 <section class="secfive"  id="interest">
     <div class="content5">
-      <h2 style="color: white; font-size: 20px; font-family: 'Roboto', sans-serif;">
-        <a href="#" style="text-decoration: none; color: white; border: 1px solid white; padding: 5px; font-family: 'Roboto', sans-serif; font-weight: lighter; line-height: 2;">My Interest</a>
-      </h2>
+   
+        <a href="#" style="text-decoration: none; color: white; border: 1px solid white; padding: 10px; font-family: 'Roboto', sans-serif; font-weight: lighter; font-size: 25px; ">My Interest</a>
+
+  
       <br>
       <div class="interest-container">
         <div class="interest-item">
@@ -266,9 +267,8 @@
   
 <!-- Section 6 -->
 <section class="secsix"  id="contact">
-    <h2 style="color: white; font-size: 20px; font-family: 'Roboto', sans-serif;">
-        <a href="#" style="text-decoration: none; color: white; border: 1px solid white; padding: 5px; font-family: 'Roboto', sans-serif; font-weight: lighter; line-height: 2;">Get in Touch</a>
-    </h2>
+  <a class="texttitle" href="#" style="text-decoration: none; color: white; border: 1px solid white; padding: 10px; font-family: 'Roboto', sans-serif; font-weight: lighter; font-size: 25px; ">Get in Touch</a>
+
     
     <div class="content6">
         
@@ -339,6 +339,15 @@
                     navLinks.style.display = "block";
                 }
             }
+            function toggleNav() {
+            var navLinks = document.getElementById("navLinks");
+            navLinks.classList.toggle("active");
+        }
+          // Add this function to close the menu when a link is clicked
+    function closeNav() {
+        var navLinks = document.getElementById("navLinks");
+        navLinks.classList.remove("active");
+    }
         </script>
         
   </body>

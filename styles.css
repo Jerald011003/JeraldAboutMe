@@ -107,37 +107,37 @@ body,
   }
 
   .hamburger-menu {
-      display: flex;
-  }
+    font-size: 16px; /* Adjust the font size as needed */
+    cursor: pointer;
+    display: flex; /* You can set this to "block" or "inline-block" based on your design */
+}
+.nav-links.active {
+  display: block;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  text-align: center;
+}
 
+.nav-links.active li {
+  padding: 10px 0;
+}
 
-  .nav-links.active {
-      display: block;
-      position: absolute;
-      top: 60px;
-      left: 0;
-      background-color: #333;
-      width: 100%;
-      text-align: center;
-  }
+.nav-links a {
+  display: flex;
+  flex-direction: column;
+  color: white; /* Add this to set the text color */
+  text-decoration: none; /* Add this to remove underlines */
+  padding: 10px 0; /* Add this to add some spacing between links */
+}
 
-  .nav-links.active li {
-      padding: 10px 0;
+.nav-links a:hover {
+  background-color: rgba(255,255,255,0); /* Add this to change the background color on hover */
+  border-radius: 5px; /* Adjust this to your preference */
+}
 
-      
-  }
-
-  .nav-links a{
-    display: flex;
-    flex-direction: column;
-
-  }
-
-  .nav-links a:hover {
-
-    padding: 0px;
-    border-radius: 0px;
-  }
 }
 
 
@@ -340,8 +340,8 @@ body,
 }
 
 @media (max-width: 200px) {
-  .right-content{
-    font-size: 10px;
+  .right-content h1{
+    font-size: 5px;
   }
   .logo{
     display: none;
@@ -363,11 +363,25 @@ body,
 
   .content3{
     height: 100%;
+    padding: 50px;
+    margin: 0;
+  }
+  .content3 a{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 20px;
   }
   .right-content{
     margin-right: 0px;
   }
-  
+
+  .left-content img{
+    width: 100%;
+    padding: 0px;
+  }
 
 }
 
@@ -406,6 +420,7 @@ body,
 .categories {
   margin-bottom: 20px;
   line-height: 50px;
+  
 }
 
 .categories a {
@@ -513,6 +528,10 @@ body,
 
 
 @media (max-width: 768px) {
+  .content5 a{
+    font-size: 10px;
+    padding: 0;
+  }
   
   .row,
   .content4 {
@@ -520,6 +539,8 @@ body,
     justify-content: center;
     align-items: center;
     text-align: center;
+    padding: 0;
+    margin: 0;
   }
 
   .item{
@@ -542,9 +563,9 @@ body,
   text-align: center;
   margin-left: 10px;
  }
- .InterestImg{
+ /* .InterestImg{
   height: 15vh;
- }
+ } */
 }
 
 .secfive {
@@ -577,9 +598,9 @@ body,
 .InterestImg,
 .interest-item img {
   border-radius: 10px;
-  max-width: 100%;
+  /* max-width: 100%; */
   height: 50vh;
-  width: 38vh;
+  /* height: 100%; */
 
 }
 
@@ -592,6 +613,13 @@ body,
   flex-wrap: nowrap; 
   justify-content: space-around;
   overflow-x: auto; 
+}
+
+@media (max-width: 1500px) {
+  .interest-item img,
+  .InterestImg{
+    height: 35vh;
+  }
 }
 /* Media queries for responsiveness */
 @media (max-width: 768px) {
@@ -607,10 +635,9 @@ body,
     margin-bottom: 20px;
     
   }
-
+  .interest-item img,
   .InterestImg{
-    width: 1000vh;
-    
+    height: auto;
   }
 }
 
