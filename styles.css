@@ -340,8 +340,8 @@ body,
 }
 
 @media (max-width: 200px) {
-  .right-content h1{
-    font-size: 5px;
+  .right-content h1, p{
+    font-size: 15px;
   }
   .logo{
     display: none;
