@@ -354,6 +354,9 @@ body,
 }
 
 @media (max-width: 768px) {
+  .foot1{
+    font-size: 12px;
+  }
   .logo{
     display: none;
   }
