@@ -17,7 +17,7 @@ body,
 
 
 .container {
-  max-width: 1900px;
+  max-width: auto;
   margin: 0 auto; 
   padding: 0px; 
   background-image: url('Photo\ 4.4.jpg'); 
@@ -241,6 +241,7 @@ body,
 @media (max-width: 768px) {
   .container {
     overflow-x: auto;
+    max-width: auto;
   }
   .secone {
     display: flex;
@@ -345,6 +346,10 @@ body,
   }
   .logo{
     display: none;
+  }
+  .container {
+    overflow-x: auto;
+    max-width: auto;
   }
 }
 
@@ -627,6 +632,22 @@ body,
   .interest-item img,
   .InterestImg{
     height: auto;
+
+
+  }
+
+  .content2{
+
+    height: auto;
+  }
+
+}
+
+@media (max-width: 5000px){
+  .left-content img{
+    width: auto;
+    padding: 0px;
+    height: auto;
   }
 }
 
@@ -637,6 +658,7 @@ body,
     align-items: center;
     
   }
+
 
   .interest-item {
     width: 90%;
